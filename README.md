@@ -27,6 +27,6 @@ De la misma manera para ejecutar el proyecto de node.
 
 ---
  ### Diagrama UML del proyecto
+![](img/modelo.png)
 
-[![diagrama](sadas "diagrama")](https://drive.google.com/file/d/0ByXMpBzeieL_aHJtU1ZvT2tmckhYVHJFSmc1U2Q3WTBzTjNn/view?usp=sharing&resourcekey=0-rR_p8WGVI_j-HKS-nd0YoA "diagrama")
 ###End
