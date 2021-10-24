@@ -1,0 +1,70 @@
+<app-header [edit]="true"></app-header>
+<main style="height: 100vh;">
+    <div class="container pt-4 d-flex justify-content-between">
+        <div>
+            <label for="select_ojo" class="form-label">Ojos</label>
+            <select id="select_ojo" class="form-select" [(ngModel)]="objOjos.id" (change)="cambio(objOjos)">
+                <option value="0">Estilos de Ojos</option>
+                <option [value]="item.id" *ngFor="let item of listOjos" >{{item.nombre}}</option>
+            </select>
+            <label for="select_boca" class="form-label">Boca</label>
+            <select id="select_boca" class="form-select" [(ngModel)]="objBoca.id" (change)="cambio(objBoca)">
+                <option value="0">Estilos de Boca</option>
+                <option [value]="item.id" *ngFor="let item of listBoca" >{{item.nombre}}</option>
+            </select>
+            <label for="select_polera" class="form-label">Polera</label>
+            <select id="select_polera" class="form-select" [(ngModel)]="objRopa.id" (change)="cambio(objRopa)">
+                <option value="0">Estilos de Polera</option>
+                <option [value]="item.id" *ngFor="let item of listRopa" >{{item.nombre}}</option>
+            </select>
+            <label for="select_pantalon" class="form-label">Pantalon</label>
+            <select id="select_pantalon" class="form-select" [(ngModel)]="objPantalon.id" (change)="cambio(objPantalon)">
+                <option value="0">Estilos de Pantalon</option>
+                <option [value]="item.id" *ngFor="let item of listPantalon" >{{item.nombre}}</option>
+            </select>
+            <label for="select_cabello" class="form-label">Cabello</label>
+            <select id="select_cabello" class="form-select" [(ngModel)]="objCabello.id" (change)="cambio(objCabello)">
+                <option value="0">Estilo de Cabello</option>
+                <option [value]="item.id" *ngFor="let item of listCabello" >{{item.nombre}}</option>
+            </select>
+            <label for="select_Cuerpo" class="form-label">Cuerpo</label>
+            <select id="select_Cuerpo" class="form-select" [(ngModel)]="objCuerpo.id" (change)="cambio(objCuerpo)">
+                <option value="0">Estilos de Cuerpo</option>
+                <option [value]="item.id" *ngFor="let item of listCuerpo" >{{item.nombre}}</option>
+            </select>
+            <label for="select_lentes" class="form-label">Lentes</label>
+            <select id="select_lentes" class="form-select" [(ngModel)]="objLentes.id" (change)="cambio(objLentes)">
+                <option value="0">Estilos de lentes</option>
+                <option [value]="item.id" *ngFor="let item of listLentes" >{{item.nombre}}</option>
+            </select>
+            <button class="btn btn-outline-danger" *ngIf="!clone" (click)="save()">Guardar</button>
+            <button class="btn btn-outline-primary" *ngIf="!clone" (click)="generateRamdon()">Generate</button>
+            <button class="btn btn-outline-primary" *ngIf="clone" (click)="clonar()">Clonar</button>
+
+        </div>
+
+        <div id="img" class="col-md-6 contenedor_personaje" style="background-image: url('assets/img/1.jpg');">
+            <div class="personaje" id="personaje">
+                <img *ngIf="objCuerpo && objCuerpo.id != 0" src="assets/img/Cuerpo/{{objCuerpo.nombre}}.png" class="cuerpo" width="100%" height="100%" alt="">
+                <div *ngIf="objOjos && objOjos.id != 0" [ngStyle]="{'margin-top': objOjos.posicion_x, 'margin-left': objOjos.posicion_y,'z-index': objOjos.posicion_z }" class="ojos">
+                    <img src="assets/img/Ojos/{{objOjos.nombre}}.png" width="150px" height="110px" alt="">
+                </div>
+                <div *ngIf="objBoca && objBoca.id != 0" [ngStyle]="{'margin-top': objBoca.posicion_x, 'margin-left': objBoca.posicion_y,'z-index': objBoca.posicion_z }" class="boca">
+                    <img src="assets/img/Boca/{{objBoca.nombre}}.png" width="100px" height="50px" alt="">
+                </div>
+                <div *ngIf="objCabello && objCabello.id != 0" [ngStyle]="{'margin-top': objCabello.posicion_x, 'margin-left': objCabello.posicion_y,'z-index': objCabello.posicion_z }" class="cabello">
+                    <img src="assets/img/Cabello/{{objCabello.nombre}}.png" width="279px" height="205px" alt="">
+                </div>
+                <div *ngIf="objLentes && objLentes.id != 0" [ngStyle]="{'margin-top': objLentes.posicion_x, 'margin-left': objLentes.posicion_y,'z-index': objLentes.posicion_z }" class="lente">
+                    <img src="assets/img/Lentes/{{objLentes.nombre}}.png" width="250px" height="110px" alt="">
+                </div>
+                <div *ngIf="objRopa && objRopa.id != 0" [ngStyle]="{'margin-top': objRopa.posicion_x, 'margin-left': objRopa.posicion_y,'z-index': objRopa.posicion_z }" class="ropa">
+                    <img src="assets/img/Polera/{{objRopa.nombre}}.png" width="220px" height="127px" alt="">
+                </div>
+                <div *ngIf="objPantalon && objPantalon.id != 0" [ngStyle]="{'margin-top': objPantalon.posicion_x, 'margin-left': objPantalon.posicion_y,'z-index': objPantalon.posicion_z }" class="pantalon">
+                    <img src="assets/img/Pantalon/{{objPantalon.nombre}}.png" width="185px" height="50px" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

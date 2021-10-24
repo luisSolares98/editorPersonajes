@@ -1,0 +1,19 @@
+#contenedor {
+    height: 100vh;
+}
+img {
+    background: cover;
+}
+h1 {
+    font-family: "brandon-grotesque" !important ;
+}
+h5 {
+    font-family: "futura-pt" !important;
+}
+.padre {
+    height: 100vh;
+     /*IMPORTANTE*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

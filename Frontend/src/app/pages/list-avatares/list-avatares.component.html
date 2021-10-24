@@ -1,0 +1,26 @@
+<app-header [list]="true"></app-header>
+
+<div id="contenedor" class="container mt-3">
+    <h3>Listado de Diseños</h3>
+    <div class="row">
+
+        <div class="col-xl-3 col-md-4 col-sm-12 mt-3" *ngFor="let item of listAvatar">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <h5 class="card-title">{{item.nombre}}</h5>
+
+                        <p style="font-size: x-small;">
+                            {{item.fecha | date :'shortDate'}}
+                        </p>
+                    </div>
+
+                    <div class="row justify-content-between">
+                        <button title="clonar" class="btn btn-outline-primary col-5" (click)="clonar(item.id)">
+                            <i class="bi bi-clipboard-plus"></i>                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

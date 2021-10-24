@@ -1,0 +1,65 @@
+.contenedor_personaje {
+    width: 650px;
+    padding-top: 140px;
+    height: 520px;
+    background-repeat: no-repeat;
+    padding-bottom: 0px;
+    background-size: cover;
+}
+
+.operaciones {
+    margin-top: 40px;
+    width: 100%;
+    background: red;
+    height: 150px;
+}
+
+select {
+    margin-bottom: 10px;
+}
+
+.cuerpo,
+.ojos,
+.boca,
+.cabello,
+.lente,
+.ropa,
+.pantalon {
+    position: absolute;
+}
+
+.ojos {
+    z-index: 40;
+    margin: 60px 0px 0px 45px;
+}
+
+.boca {
+    margin: 165px 0px 0px 70px;
+}
+
+.cabello {
+    z-index: 91;
+    margin: -33px 0px 0px -17px;
+}
+
+.lente {
+    z-index: 80;
+    margin: 75px 0px 0px -8px;
+}
+
+.ropa {
+    z-index: 80;
+    margin: 195px 0px 0px 7px;
+}
+
+.pantalon {
+    z-index: 70;
+    margin: 294px 0px 0px 30px;
+}
+
+.personaje {
+    position: relative;
+    width: 240px;
+    height: 350px;
+    margin: 0px auto;
+}
